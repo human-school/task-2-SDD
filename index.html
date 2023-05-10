@@ -3,20 +3,30 @@
 <head>
 <meta charset="utf-8">
 <title>vending</title>
+	<script>
+		function sum(){
+document.getElementById("sum").innerText=document.getElementById("sum").innerText*1+event.target.innerText*1;
+  }
+			</script>
 </head>
 <body>
-	<table border="1" >
+	
+<table border="1" cellspacing="1" cellpadding="1">
+  <tbody>
+    <tr>
+      <th align="center" valign="middle" scope="col">admin&nbsp;</th>
+      <th scope="col">	<table border="1" >
   <tbody>
     <tr>
       <td><table border="1">
   <tbody>
     <tr>
-      <td><img src="images/item-1.png" width="100" height="100" alt=""/>&nbsp;</td>
-      <td><img src="images/item-2.png" width="100" height="100" alt=""/>&nbsp;</td>
+      <td><button onclick="sum()" type="button" name="button"><img src="images/item-1.png" width="100" height="100" alt=""/></button></td>
+      <td><button onclick="sum()" type="button" name="button"><img src="images/item-2.png" width="100" height="100" alt=""/></button></td>
     </tr>
     <tr>
-      <td><img src="images/item-3.png" width="100" height="100" alt=""/>&nbsp;</td>
-      <td><img src="images/item-4.png" width="100" height="100" alt=""/>&nbsp;</td>
+      <td><button onclick="sum()" type="button" name="button"><img src="images/item-3.png" width="100" height="100" alt=""/></button></td>
+      <td><button onclick="sum()" type="button" name="button"><img src="images/item-4.png" width="100" height="100" alt=""/></button></td>
     </tr>
   </tbody>
 </table>
@@ -27,29 +37,27 @@
             <td ><table width="100%" border="1" cellspacing="10" cellpadding="10">
               <tbody>
                 <tr>
-                  <th scope="col">$&nbsp;</th>
-                  <th scope="col">&nbsp;</th>
-                  <th scope="col">&nbsp;</th>
-                  <th scope="col">&nbsp;.</th>
-                  <th scope="col">&nbsp;</th>
-                  <th scope="col">&nbsp;</th>
-                  <th scope="col">light&nbsp;</th>
+                  <th scope="col"><span id="sum">$0</span></p></th>
                 </tr>
               </tbody>
-            </table>              &nbsp;</td>
+            </table>                        insert "money"&nbsp;below&nbsp;</td>
           </tr>
           <tr>
-            <td>&nbsp;coin in</td>
-          </tr>
-          <tr>
-            <td><img src="images/notes.png" width="150" height="50" alt=""/>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;place for the notes</td>
-          </tr>
-          <tr>
-            <td>&nbsp;coin release</td>
-          </tr>
+            <td><table width="100%" border="1" cellspacing="10" cellpadding="10">
+  <tbody>
+    <tr>
+      <th scope="col">&nbsp;$1</th>
+      <th scope="col">&nbsp;$2</th>
+      <th scope="col">&nbsp;$5</th>
+    </tr>
+  </tbody>
+</table>
+
+</td>
+			</tr>
+			<tr>
+            <td>&nbsp;coin out</td>
+			</tr>
         </tbody>
       </table></td>
     </tr>
@@ -58,6 +66,9 @@
     </tr>
   </tbody>
 </table>
-
+</th>
+    </tr>
+  </tbody>
+</table>
 </body>
 </html>
