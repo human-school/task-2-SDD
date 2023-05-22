@@ -1,40 +1,59 @@
 <!doctype html>
 <html>
+	<!-- a disaster zone is below. YOU HAVE BEEN WARNED  -->
 <head>
 <meta charset="utf-8">
+	<!-- tittle  -->
 <title>vending</title>
 
 </head>
 <body>
-	
+	<!-- creates the main to sections for admin and vending  -->
 <table border="1" cellspacing="1" cellpadding="1">
   <tbody>
     <tr>
       <th align="center" valign="middle" scope="col">admin&nbsp;</th>
       <th scope="col"><table width="100%" border="1" cellspacing="1" cellpadding="1">
-		  
+		<!-- breakes the tbody to there can be more lines  -->  
 <tbody>
     
   </tbody></th>
     </tr>
+	  <!-- cloeses the first one  -->
   </tbody>
 </table>
+	<!-- then the second to prevent the table from spliting in half  -->
 <table border="1" >
   
 </table>
+	<!-- your looking at the right, 3 times to prevent it from breaking in half. then mroe tables  -->
 	<table width="100%" border="1" cellspacing="1" cellpadding="1">
   <tbody>
     <tr>
-      <th scope="col">&nbsp;</th>
+		<!-- the table for the images  -->
       <th scope="col"><table width="100%" border="1" cellspacing="1" cellpadding="1">
         <tbody>
           <tr>
-            <th scope="col">&nbsp;</th>
+            <th scope="col"><img src="images/item-1.png" width="100" height="100" alt=""/></th>
+            <th scope="col"><img src="images/item-2.png" width="100" height="100" alt=""/></th>
+          </tr>
+          <tr>
+            <td><img src="images/item-3.png" width="100" height="100" alt=""/></td>
+            <td><img src="images/item-4.png" width="100" height="100" alt=""/></td>
+          </tr>
+        </tbody>
+      </table></th>
+		<!-- the table for the calculation buttons  -->
+      <th scope="col"><table width="100%" border="1" cellspacing="1" cellpadding="1">
+        <tbody>
+          <tr>
+            <th scope="col">&nbsp;Use the keypad below<br> to make your selection</th>
           </tr>
           <tr>
             <td><table width="100%" border="1" cellspacing="1" cellpadding="1">
               <tbody>
                 <tr>
+					<!-- the javascript link in  -->
                   <th scope="col"><button onclick="sum()" type="button" name="button">1</button></th>
                   <th scope="col"><button onclick="sum()" type="button" name="button">2</button></th>
                 </tr>
@@ -60,13 +79,14 @@
                 <tr>
                   <th scope="col"><span id="sum">0</span></p></th>
                 </tr>
-              </tbody>
+		  </tbody>                           <!-- i have ZERO idea how this happened  -->
             </table>                        insert "money"&nbsp;below&nbsp;</td>
           </tr>
           <tr>
             <td><table width="100%" border="1" cellspacing="10" cellpadding="10">
   <tbody>
     <tr>
+		<!-- how to "pay"  -->
       <th scope="col"><button onclick="sum()" type="button" name="button">-1</button></th>
       <th scope="col"><button onclick="sum()" type="button" name="button">-2</button></th>
       <th scope="col"><button onclick="sum()" type="button" name="button">-5</button></th>
@@ -77,12 +97,14 @@
 				<tbody>
 					
 <tr>
+	<!-- confirm button (to be made real later)  -->
 	  <img src="images/confirm order.png" width="100%" height="100%" alt=""/>
 	  </tr>
   </tbody>
 </table>
 
 </td>
+			  <!-- 2 place holders  -->
 		</tr>
 			<tr>
             <td>&nbsp;coin out</td>
@@ -99,6 +121,8 @@
 </th>
     </tr>
   </tbody>
+<!-- do not move one lower, it breaks the table in half  -->
+<!-- the sum that the code above ties into (likley to change)  -->
 </table>
 	<script type="text/javascript">
   function sum(){
