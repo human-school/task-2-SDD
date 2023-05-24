@@ -5,7 +5,33 @@
 <meta charset="utf-8">
 	<!-- tittle  -->
 <title>vending</title>
+	<!-- jquery add  -->
+<script src="jquery-3.7.0.min.js"></script>
+	<!-- link to mian file  -->
+<script src="main.js">
+	</script>
+	<script>
+$(document).ready(function(){
+  $("#min").prop("disabled", true); // initially minus is disabled
+    $("#plus").click(function () { // on click of + button
+      $('#num').html(parseInt($('#num').html())+1);  // get div number, add 1 and paste again to the div(new number)
+      if(parseInt($('#num').html())>0){ //if new value is greater than 0
+        $("#min").prop("disabled", false); // enable - button
+      }else{
+        $("#min").prop("disabled", true); // otherwise remain disable
+      }
+  });
 
+  $("#min").click(function () { // on click of - button
+    $('#num').html(parseInt($('#num').html())-1); // get div number,substract 1 and again paste again to the div(new number)
+      if(parseInt($('#num').html())>0){ // if the new number is >0
+        $("#min").prop("disabled", false); // remain enable of - button
+      }else{
+        $("#min").prop("disabled", true); // otherwise disable - button
+      }
+  });
+});
+	</script>
 </head>
 <body>
 	<!-- creates the main to sections for admin and vending  -->
@@ -54,12 +80,12 @@
               <tbody>
                 <tr>
 					<!-- the javascript link in  -->
-                  <th scope="col"><button onclick="sum();text();" type="button" name="button">1</button></th>
-                  <th scope="col"><button onclick="sum();text();" type="button" name="button">2</button></th>
+                  <th scope="col"><button onclick="clickEvent()" type="button" name="button">1</button></th>
+                  <th scope="col"><button onclick="clickEvent()" type="button" name="button">2</button></th>
                 </tr>
                 <tr>
-                  <td><button onclick="sum()" type="sum();text();" name="button">3</button></td>
-                  <td><button onclick="sum()" type="sum();text();" name="button">4</button></td>
+                  <td><button onclick="clickEvent()" type="button" name="button">3</button></td>
+                  <td><button onclick="clickEvent()" type="button)" name="button">4</button></td>
                 </tr>
               </tbody>
             </table></td>
@@ -87,9 +113,9 @@
   <tbody>
     <tr>
 		<!-- how to "pay"  -->
-      <th scope="col"><button onclick="sum()" type="button" name="button">-1</button></th>
-      <th scope="col"><button onclick="sum()" type="button" name="button">-2</button></th>
-      <th scope="col"><button onclick="sum()" type="button" name="button">-5</button></th>
+      <th scope="col"><button onclick="clickEvent()" type="button" name="button">-1</button></th>
+      <th scope="col"><button onclick="clickEvent()" type="button" name="button">-2</button></th>
+      <th scope="col"><button onclick="clickEvent()" type="button" name="button">-5</button></th>
     </tr>
 	  </tbody>
 				</table>
@@ -98,9 +124,7 @@
 					
 <tr>
 	<!-- confirm button (to be made real later)  -->
-	<div>
-	 <p>button</p>
-		</div>
+	<button id="min">collect</button>
 	  </tr>
   </tbody>
 </table>
@@ -115,8 +139,12 @@
       </table></td>
     </tr>
     <tr>
-      <td valign="middle"></td>
+      <td valign="middle">		
+	
 		<td> product out</td>
+	
+		</td>
+
     </tr>
   </tbody>
 </table>
@@ -124,22 +152,9 @@
     </tr>
   </tbody>
 <!-- do not move one lower, it breaks the table in half  -->
-<!-- the sum that the code above ties into (likley to change)  -->
 </table>
-	<script type="text/javascript">
-  function sum(){
-document.getElementById("sum").innerText=document.getElementById("sum").innerText*1+event.target.innerText*1;
-  }
-function text() {
-  var p = document.createElement("item 1");
-  var t = document.createTextNode("item 2");
-	var q = document.createTextNode("item 3");
-	var r = document.createTextNode("item 4");
-  p.appendChild(t);
-	p.appendChild(r);
-	p.appendChild(t);
-  document.body.appendChild(p);
-}
+
+
 </script>
 </body>
 </html>
