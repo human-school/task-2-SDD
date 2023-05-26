@@ -10,28 +10,6 @@
 	<!-- link to mian file  -->
 <script src="main.js">
 	</script>
-	<script>
-$(document).ready(function(){
-  $("#min").prop("disabled", true); // initially minus is disabled
-    $("#plus").click(function () { // on click of + button
-      $('#num').html(parseInt($('#num').html())+1);  // get div number, add 1 and paste again to the div(new number)
-      if(parseInt($('#num').html())>0){ //if new value is greater than 0
-        $("#min").prop("disabled", false); // enable - button
-      }else{
-        $("#min").prop("disabled", true); // otherwise remain disable
-      }
-  });
-
-  $("#min").click(function () { // on click of - button
-    $('#num').html(parseInt($('#num').html())-1); // get div number,substract 1 and again paste again to the div(new number)
-      if(parseInt($('#num').html())>0){ // if the new number is >0
-        $("#min").prop("disabled", false); // remain enable of - button
-      }else{
-        $("#min").prop("disabled", true); // otherwise disable - button
-      }
-  });
-});
-	</script>
 </head>
 <body>
 	<!-- creates the main to sections for admin and vending  -->
@@ -80,12 +58,12 @@ $(document).ready(function(){
               <tbody>
                 <tr>
 					<!-- the javascript link in  -->
-                  <th scope="col"><button onclick="clickEvent()" type="button" name="button">1</button></th>
-                  <th scope="col"><button onclick="clickEvent()" type="button" name="button">2</button></th>
+                  <th scope="col"><button value="1" class="add" name="button3" id="button1">1</button></th>
+                  <th scope="col"><button value="2" class="add" name="button3" id="button2">2</button></th>
                 </tr>
                 <tr>
-                  <td><button onclick="clickEvent()" type="button" name="button">3</button></td>
-                  <td><button onclick="clickEvent()" type="button)" name="button">4</button></td>
+                  <td><button value="3" class="add" name="button3" id="button3">3</button></td>
+                  <td><button value="4" class="add" name="button3" id="button4">4</button></td>
                 </tr>
               </tbody>
             </table></td>
@@ -103,7 +81,7 @@ $(document).ready(function(){
             <td ><table width="100%" border="1" cellspacing="10" cellpadding="10">
               <tbody>
                 <tr>
-                  <th scope="col"><span id="sum">0</span></p></th>
+                  <th scope="col"><input name="value_sum" style="text-align:right" id="costs" value="$" type="text" readonly></p></th>
                 </tr>
 		  </tbody>                           <!-- i have ZERO idea how this happened  -->
             </table>                        insert "money"&nbsp;below&nbsp;</td>
@@ -153,7 +131,20 @@ $(document).ready(function(){
   </tbody>
 <!-- do not move one lower, it breaks the table in half  -->
 </table>
-
+<script>
+var total = 0;
+$("button[name=button1],[name=button2],[name=button3]").on('click', function () {
+    var self = $(this);
+    var gValue = Number(self.val());
+    if (self.hasClass("add")) {
+        total += gValue;
+        self.removeClass("add").addClass("sub");
+    } else {
+        total -= gValue;
+        self.removeClass("sub").addClass("add");
+    }
+    $("#costs").val(total);
+});
 
 </script>
 </body>
