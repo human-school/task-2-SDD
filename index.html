@@ -1,126 +1,51 @@
 <!doctype html>
 <html>
-	<!-- a disaster zone is below. YOU HAVE BEEN WARNED  -->
 <head>
-<meta charset="utf-8">
-	<!-- tittle  -->
-<title>vending</title>
-	<!-- jquery add  -->
-<script src="jquery-3.7.0.min.js"></script>
-	<!-- link to mian file  -->
-<script src="main.js">
+	<script src="main.js">
 	</script>
+<meta charset="utf-8">
+<title>vender na I WANT BENDER</title>
 </head>
-<body>
-	<!-- creates the main to sections for admin and vending  -->
-<table border="1" cellspacing="1" cellpadding="1">
+<!-- make the hide script run at startup -->
+<body onload="hide()">
+	<table width="200" border="1">
   <tbody>
     <tr>
-      <th align="center" valign="middle" scope="col">admin&nbsp;</th>
-      <th scope="col"><table width="200" border="1">
-        <tbody>
-          <tr>
-            <table width="100%" border="1" cellspacing="1" cellpadding="1"></th>
-		<!-- breakes the tbody to there can be more lines  -->  
+      <td><img src="images/item-1.png" width="100" height="100" alt=""/></td>
+      <td><img src="images/item-2.png" width="100" height="100" alt=""/></td>
+		<!-- the click and lock buttons -->
+      <td><input id="Hide" type="button" class="Button"  value="hide all" onclick="hide()"/><p></p><input id="btnHide1" type="button" class="Button"  value="token1" onclick="hideDiv1();hide();" /><input id="btnHide2" type="button" class="Button"  value="token2" onclick="hideDiv2();hide();"/><input id="btnHide3" type="button" class="Button"  value="token3" onclick="hideDiv3();hide();"/><input id="btnHide4" type="button" class="Button"  value="token4" onclick="hideDiv4();hide();"/></td>
     </tr>
-	  <!-- cloeses the first one  -->
-  </tbody>
-</table>
-	<table width="100%" border="1" cellspacing="1" cellpadding="1">
-  <tbody>
-    <tr>
-		<!-- the table for the images  -->
-      <th scope="col"><table width="100%" border="1" cellspacing="1" cellpadding="1">
-        <tbody>
-          <tr>
-            <th scope="col"><img src="images/item-1.png" width="100" height="100" alt=""/></th>
-            <th scope="col"><img src="images/item-2.png" width="100" height="100" alt=""/></th>
-          </tr>
-          <tr>
-            <td><img src="images/item-3.png" width="100" height="100" alt=""/></td>
-            <td><img src="images/item-4.png" width="100" height="100" alt=""/></td>
-        </tbody>
-      </table>
-	  </th>
-		<!-- the table for the calculation buttons  -->
-      <th valign="top" scope="col"><table width="200" border="1">
-        <tbody>
-          <tr>
-            <th scope="col">&nbsp;Use the keypad below<br> to make your selection</th>
-          </tr>
-          <tr>
-            <td><table width="100%" border="1" cellspacing="1" cellpadding="1">
-              <tbody>
-                <tr>
-					<!-- the javascript link in  -->
-                  <th scope="col"><button value="1" class="add" name="button3" id="txtn1">1</button></th>
-                  <th scope="col"><button value="2" class="add" name="button3" id="txtn2">2</button></th>
-                </tr>
-                <tr>
-                  <td><button value="3" class="add" name="button3" id="txtn3">3</button></td>
-                  <td><button value="4" class="add" name="button3" id="txtn4">4</button></td>
-                </tr>
-          </tr>
-          <tr>
-            <table border="1">
-        <tbody>
-          <tr>
-            <td ><table width="100%" border="1" cellspacing="10" cellpadding="10">
-              <tbody>
-                <tr>
-                  <th scope="col"><input name="value_sum" style="text-align:left" id="total" value="$" type="text" readonly></p></th>
-                </tr>
-		  </tbody>                           <!-- i have ZERO idea how this happened  -->
-            </table>                        insert "money"&nbsp;below&nbsp;</td>
-          </tr>
-          <tr>
-            <td><table width="100%" border="1" cellspacing="10" cellpadding="10">
-  <tbody>
-    <tr>
-		<!-- how to "pay"  -->
-      <th scope="col"><button onclick="clickEvent()" type="button" name="button">-1</button></th>
-      <th scope="col"><button onclick="clickEvent()" type="button" name="button">-2</button></th>
-      <th scope="col"><button onclick="clickEvent()" type="button" name="button">-5</button></th>
+	<tr>
+		<!-- place-holder -->
+      <td>amount of product</td>
+      <td>amount of product</td>
+
     </tr>
-	  </tbody>
-				</table>
-				<table>
-				<tbody>
-					
-<tr>
-	<!-- confirm button (to be made real later)  -->
-	<button id="min">collect</button>
-	  </tr>
+    <tr>
+      <td><img src="images/item-3.png" width="100" height="100" alt=""/></td>
+      <td><img src="images/item-4.png" width="100" height="100" alt=""/></td>
+		<!-- the click and lock buttons -->
+      <td><input id="btnShow1" type="button" name="answer" class="Button" value="can of car" onclick="showDiv1()" disabled="true"/><input id="btnShow2" type="button" name="answer" class="Button" value="tomato energy extreme" onclick="showDiv2()" disabled="true"/><input id="btnShow3" type="button" name="answer" class="Button" value="tomato soup" onclick="showDiv3()" disabled="true"/><input id="btnShow4" type="button" name="answer" class="Button" value="chicken surpreime" onclick="showDiv4()" disabled="true"/></td>
+		<!-- reset the soon to be counter -->
+      <td><button onClick="window.location.reload()">restock items</button></td>
+    </tr>
+	<tr>
+		<!-- place-holder -->
+      <td>amount of product</td>
+      <td>amount of product</td>
+		<!-- the div that gets hidden for when you collect -->
+		<td><div id="content_caract_1">Your can of car has been served.</div>
+<div id="content_caract_2">Your tonato energy extreme has been served.</div>
+<div id="content_caract_3">Your tomoto soup have has served.</div>
+<div id="content_caract_4">Your chicken surpreme has been served.</div></td>
+
+    </tr>
+	<tr>
+		
+	</tr>
   </tbody>
 </table>
 
-</td>
-			  <!-- 2 place holders  -->
-		</tr>
-			<tr>
-            <td>&nbsp;coin out</td>
-			</tr>
-          </tr>
-        </tbody>
-      </table>
-        <table width="100%" border="1" cellspacing="1" cellpadding="1">
-        <tbody>
-          <tr>
-            
-          </tbody>
-            </table></td>
-          </tr>
-        </tbody>
-      </table></th>
-    </tr>
-  </tbody>
-</table>
-
-</td>
-<tr>
-<td></td><td>product out</td>
-</tr>
-        </tbody>
-</table>
 </body>
 </html>

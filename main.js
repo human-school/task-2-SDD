@@ -1,29 +1,49 @@
-//2 commands 1 button
-function clickEvent(){
-    num();
-    text();
-}
-//maths of the vending
-  function num(){
-document.getElementById("costs").innerText=document.getElementById("costs").innerText*1+event.target.innerText*1;
-  }
-//jquery count
 
- $(document).ready(function () {
-        $('#btnadd').on('click', function () {
-            var n1 = parseInt($('#txtn1').val());
-            var n2 = parseInt($('#txtn2').val());
-			var n3 = parseInt($('#txtn3').val());
-			var n4 = parseInt($('#txtn4').val());
-            var r = n1 + n2 + n3 + n4;
-            return false;
-        });
-        $('#btnclear').on('click', function () {
-            $('#txtn1').val('1');
-            $('#txtn2').val('2');
-			$('#txtn3').val('3');
-			$('#txtn4').val('4');
-            $('#txtn1').focus();
-            return false;
-        });
-    });
+function showDiv1() {
+   document.getElementById('content_caract_1').style.display = "block";
+      document.getElementById('btnShow1').disabled = true;
+   document.getElementById('btnHide1').disabled = false;
+}
+function showDiv2() {
+   document.getElementById('content_caract_2').style.display = "block";
+      document.getElementById('btnShow2').disabled = true;
+   document.getElementById('btnHide2').disabled = false;
+}
+function showDiv3() {
+   document.getElementById('content_caract_3').style.display = "block";
+      document.getElementById('btnShow3').disabled = true;
+   document.getElementById('btnHide3').disabled = false;
+}
+function showDiv4() {
+   document.getElementById('content_caract_4').style.display = "block";
+   document.getElementById('btnShow4').disabled = true;
+   document.getElementById('btnHide4').disabled = false;
+}
+function hideDiv1() {
+   document.getElementById('content_caract_1').style.display = "none";
+   document.getElementById('btnShow1').disabled = false;
+   document.getElementById('btnHide1').disabled = true;
+}
+function hideDiv2() {
+   document.getElementById('content_caract_2').style.display = "none";
+   document.getElementById('btnShow2').disabled = false;
+   document.getElementById('btnHide2').disabled = true;
+}
+function hideDiv3() {
+   document.getElementById('content_caract_3').style.display = "none";
+   document.getElementById('btnShow3').disabled = false;
+   document.getElementById('btnHide3').disabled = true;
+}
+function hideDiv4() {
+   document.getElementById('content_caract_4').style.display = "none";
+   document.getElementById('btnShow4').disabled = false;
+   document.getElementById('btnHide4').disabled = true;
+}
+function hide() {
+   document.getElementById('content_caract_1').style.display = "none";
+   document.getElementById('content_caract_2').style.display = "none";
+   document.getElementById('content_caract_3').style.display = "none";
+   document.getElementById('content_caract_4').style.display = "none";
+   document.getElementById('btnShow').disabled = false;
+   document.getElementById('btnHide').disabled = true;
+}
