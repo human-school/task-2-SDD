@@ -47,3 +47,31 @@ function hide() {
    document.getElementById('btnShow').disabled = false;
    document.getElementById('btnHide').disabled = true;
 }
+function hide1() {
+  hideDiv1();
+  hide();
+}
+function hide2() {
+  hideDiv1();
+  hide();
+}
+function hide3() {
+  hideDiv1();
+  hide();
+}
+function hide4() {
+  hideDiv1();
+  hide();
+}
+function show1() {
+  showDiv1();
+}
+function show2() {
+  showDiv2();
+}
+function show3() {
+  showDiv3();
+}
+function show4() {
+  showDiv4();
+}

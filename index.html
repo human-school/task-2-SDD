@@ -8,13 +8,13 @@
 </head>
 <!-- make the hide script run at startup -->
 <body onload="hide()">
-	<table width="200" border="1">
+<table width="200" border="1">
   <tbody>
     <tr>
       <td><img src="images/item-1.png" width="100" height="100" alt=""/></td>
       <td><img src="images/item-2.png" width="100" height="100" alt=""/></td>
 		<!-- the click and lock buttons -->
-      <td><input id="Hide" type="button" class="Button"  value="hide all" onclick="hide()"/><p></p><input id="btnHide1" type="button" class="Button"  value="token1" onclick="hideDiv1();hide();" /><input id="btnHide2" type="button" class="Button"  value="token2" onclick="hideDiv2();hide();"/><input id="btnHide3" type="button" class="Button"  value="token3" onclick="hideDiv3();hide();"/><input id="btnHide4" type="button" class="Button"  value="token4" onclick="hideDiv4();hide();"/></td>
+      <td><input id="Hide" type="button" class="Button"  value="hide all" onclick="hide()"/><p></p><input id="btnHide1" type="button" class="Button"  value="token1" onclick="hide1()" /><input id="btnHide2" type="button" class="Button"  value="token2" onclick="hide2()"/><input id="btnHide3" type="button" class="Button"  value="token3" onclick="hide3()"/><input id="btnHide4" type="button" class="Button"  value="token4" onclick="hide4()"/></td>
     </tr>
 	<tr>
 		<!-- place-holder -->
@@ -25,8 +25,14 @@
     <tr>
       <td><img src="images/item-3.png" width="100" height="100" alt=""/></td>
       <td><img src="images/item-4.png" width="100" height="100" alt=""/></td>
-		<!-- the click and lock buttons -->
-      <td><input id="btnShow1" type="button" name="answer" class="Button" value="can of car" onclick="showDiv1()" disabled="true"/><input id="btnShow2" type="button" name="answer" class="Button" value="tomato energy extreme" onclick="showDiv2()" disabled="true"/><input id="btnShow3" type="button" name="answer" class="Button" value="tomato soup" onclick="showDiv3()" disabled="true"/><input id="btnShow4" type="button" name="answer" class="Button" value="chicken surpreime" onclick="showDiv4()" disabled="true"/></td>
+				<!-- can of car lockout when no token -->
+      <td><input id="btnShow1" type="button" name="answer" class="Button" value="can of car" onclick="show1()" disabled="true"/>
+      	<!-- tomato energy extreme lockout when no token -->
+      	<input id="btnShow2" type="button" name="answer" class="Button" value="tomato energy extreme" onclick="show2()" disabled="true"/>
+      	<!-- tomato soup lockout when no token -->
+      	<input id="btnShow3" type="button" name="answer" class="Button" value="tomato soup" onclick="show3()" disabled="true"/>
+      	<!-- chicken supreme lockout when no token -->
+      	<input id="btnShow4" type="button" name="answer" class="Button" value="chicken supreme" onclick="show4()" disabled="true"/></td>
 		<!-- reset the soon to be counter -->
       <td><button onClick="window.location.reload()">restock items</button></td>
     </tr>
@@ -35,17 +41,37 @@
       <td>amount of product</td>
       <td>amount of product</td>
 		<!-- the div that gets hidden for when you collect -->
-		<td><div id="content_caract_1">Your can of car has been served.</div>
-<div id="content_caract_2">Your tonato energy extreme has been served.</div>
-<div id="content_caract_3">Your tomoto soup have has served.</div>
-<div id="content_caract_4">Your chicken surpreme has been served.</div></td>
-
-    </tr>
+		<td>
+	<div id="content_caract_1">Your can of car has been served.</div>
+	<div id="content_caract_2">Your tonato energy extreme has been served.</div>
+	<div id="content_caract_3">Your tomoto soup have has served.</div>
+	<div id="content_caract_4">Your chicken surpreme has been served.</div></td>
+     </tr>
 	<tr>
 		
 	</tr>
   </tbody>
 </table>
+<table width="200" border="1">
+  <tbody>
+    <tr>
+      <td>&nbsp;wallet</td>
 
+    </tr>
+	<tr>
+      <td>&nbsp;token 1</td>
+      <td>&nbsp;token 2</td>
+      <td>&nbsp;token 3</td>
+		<td>&nbsp;token 4</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+	
 </body>
 </html>
