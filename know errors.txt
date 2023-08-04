@@ -1,0 +1,2 @@
+users can just ignor a "no stock popup" and can order more
+every item needs to have stock or a "no stock popup" will occuor for every action

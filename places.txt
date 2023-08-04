@@ -1,0 +1,13 @@
+https://stackoverflow.com/questions/69414972/how-to-keep-updating-value-of-a-variable-by-clicking-on-a-button-in-javascript-a
+https://stackoverflow.com/questions/10544520/two-onclick-actions-one-button
+https://stackoverflow.com/questions/50570096/how-to-create-a-class-to-disable-button-if-the-value-is-zero
+https://stackoverflow.com/questions/3786159/how-to-disable-enable-a-button-by-jquery?rq=3
+https://stackoverflow.com/questions/27769270/how-do-i-add-up-values-of-buttons-in-jquery
+https://stackoverflow.com/questions/16269385/jquery-adding-2-numbers-from-input-fields
+https://stackoverflow.com/questions/59627095/vending-machine-function-in-javascript
+https://stackoverflow.com/questions/3910736/how-to-call-multiple-javascript-functions-in-onclick-event
+https://stackoverflow.com/questions/52604453/lock-unlock-buttons
+https://stackoverflow.com/questions/69511727/how-to-make-buttons-that-adds-or-subtracts-value-inside-input
+https://stackoverflow.com/questions/69047976/add-and-subtract-button-in-for-loop-javascript
+https://stackoverflow.com/questions/53770267/simple-buttons-for-adding-and-subtracting-of-numbers
+https://stackoverflow.com/questions/26338605/set-an-element-id-to-a-variable-javascript-html

@@ -1,37 +1,49 @@
 <!doctype html>
 <html>
 <head>
-	<script src="main.js">
-	</script>
 <meta charset="utf-8">
 <title>vender na I WANT BENDER</title>
 </head>
 <!-- make the hide script run at startup -->
-<body onload="hide()">
+<body onload="start()">
 <table width="200" border="1">
   <tbody>
     <tr>
+      <!-- display images -->
       <td><img src="images/item-1.png" width="100" height="100" alt=""/></td>
       <td><img src="images/item-2.png" width="100" height="100" alt=""/></td>
-		<!-- hide any still active divs -->
+		<!-- hide remaing output -->
       <td><input id="Hide" type="button" class="Button"  value="hide all" onclick="hide()"/><p></p>
-<!-- token 1 add -->
-      	<input id="btnHide1" type="button" class="Button"  value="item 1" onclick="hide1()" />
-<!-- token 2 add -->
-      	<input id="btnHide2" type="button" class="Button"  value="item 2" onclick="hide2()"/>
-<!-- token 3 add -->
-      	<input id="btnHide3" type="button" class="Button"  value="item 3" onclick="hide3()"/>
-<!-- token 4 add -->
-      	<input id="btnHide4" type="button" class="Button"  value="item 4" onclick="hide4()"/></td>
-        <td><input id="total" type="text" value="0"></td>
+      <input id="change" type="button" class="Button"  value="withdraw money" onclick="change()"/><p></p>
+<!-- item 1 select -->
+        <div class="button1">
+      	<input id="btnHide1" type="button" class="Button"  value="item 1 $1" onclick="hide1()"/>
+      </div>
+<!-- item 2 select -->
+      <div class="button2">
+      	<input id="btnHide2" type="button" class="Button"  value="item 2 $2" onclick="hide2()"/>
+      </div>
+<!-- item 3 select -->
+      <div class="button3">
+      	<input id="btnHide3" type="button" class="Button"  value="item 3 $3" onclick="hide3()"/>
+      </div>
+<!-- item 4 select -->
+      <div class="button4">
+      	<input id="btnHide4" type="button" class="Button"  value="item 4 $4" onclick="hide4()"/>
+      </div>
+      </td>
+      </div1>
+      <!-- display money in play and updates the var -->
+        <td><input id="total" type="text" onchange="count=this.value;" disabled="true"/></td>
     </tr>
 	<tr>
-		<!-- place-holder -->
-      <td>amount of product</td>
-      <td>amount of product</td>
+		<!-- displays stock of item 1 and 2 -->
+      <td><input id="amount1" type="text" value="0" disabled="true"></td>
+      <td><input id="amount2" type="text" value="0" disabled="true"></td>
 
     </tr>
     <tr>
+      <!-- display images -->
       <td><img src="images/item-3.png" width="100" height="100" alt=""/></td>
       <td><img src="images/item-4.png" width="100" height="100" alt=""/></td>
 				<!-- can of car lockout when no token -->
@@ -44,17 +56,17 @@
       	<!-- chicken supreme lockout when no token -->
       	<input id="btnShow4" type="button" name="4" class="Button" value="chicken supreme" onclick="show4()" disabled="true"/></td>
 		<!-- reset the soon to be counter -->
-      <td><button onClick="window.location.reload()">restock items</button></td>
+      <td><button onClick="restock()">restock items</button></td>
     </tr>
 	<tr>
-		<!-- place-holder -->
-      <td>amount of product</td>
-      <td>amount of product</td>
+		<!-- displays stock of item 3 and 4 -->
+      <td><input id="amount3" type="text" value="0" disabled="true"></td>
+      <td><input id="amount4" type="text" value="0" disabled="true"></td>
 		<!-- the div that gets hidden for when you collect -->
 		<td>
 	<div id="content_caract_1">Your can of car has been served.</div>
 	<div id="content_caract_2">Your tonato energy extreme has been served.</div>
-	<div id="content_caract_3">Your tomoto soup have has served.</div>
+	<div id="content_caract_3">Your tomoto soup has served.</div>
 	<div id="content_caract_4">Your chicken surpreme has been served.</div></td>
      </tr>
 	<tr>
@@ -65,23 +77,31 @@
 <table width="200" border="1">
   <tbody>
     <tr>
+      <!-- text to show where to add money -->
       <td>&nbsp;insert<br>money</td>
 
     </tr>
 	<tr>
+    <!-- text to show where to add money -->
       <td>&nbsp;add 1</td>
       <td>&nbsp;add 2</td>
       <td>&nbsp;add 5</td>
 		  <td>&nbsp;add 10</td>
     </tr>
     <tr>
-      <td><button id="coin1" onclick="money1()">1</button></td>
-      <td><button id="coin2" onclick="money2()">2</button></td>
-      <td><button id="coin5" onclick="money5()">5</button></td>
-      <td><button id="coin10" onclick="money10()">10</button></td>
+      <!-- add 1 dollar -->
+      <td><button id="coin1" onchange="amount1=this.value;" onclick="money1();check();">1</button></td>
+      <!-- add 2 dollars -->
+      <td><button id="coin2" onchange="amount2=this.value;" onclick="money2();check()">2</button></td>
+      <!-- add 5 dollars -->
+      <td><button id="coin5" onchange="amount3=this.value;" onclick="money5();check()">5</button></td>
+      <!-- add 10 dollars -->
+      <td><button id="coin10" onchange="amount4=this.value;" onclick="money10();check()">10</button></td>
     </tr>
   </tbody>
 </table>
-	
+<!-- include the js code -->
+	  <script src="main.js">
+  </script>
 </body>
 </html>
